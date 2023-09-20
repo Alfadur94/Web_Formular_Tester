@@ -1,0 +1,35 @@
+﻿@using Web_Formular_Tester.Models
+@model Formular1Model
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>Formular1</title>
+</head>
+<body>
+	<h1>Formular 1</h1>
+	<form asp-action="Formular1">
+		<label asp-for="Vorname"></label>
+		<br />
+		<input asp-for="Vorname" />
+		<br />
+		<label asp-for="Nachname"></label>
+		<br />
+		<input asp-for="Nachname" />
+		<br />
+		<label asp-for="Bemerkung"></label>
+		<br />
+		<textarea asp-for="Bemerkung"></textarea>
+		<br />
+		<button type="submit">Speichern</button>
+		<button type="reset">Reset</button>
+	</form>
+	<a href="/home/index">Zurück</a>
+</body>
+</html>

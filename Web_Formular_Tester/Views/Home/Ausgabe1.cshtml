@@ -1,0 +1,29 @@
+﻿@using Web_Formular_Tester.Models
+@model Formular1Model
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>Ausgabe1</title>
+</head>
+<body>
+	<p>Aha Sie sind @Model.Vorname @Model.Nachname .</p>
+	@{
+		if (Model.Bemerkung == null)
+		{
+			<p>Sie haben keine Bemerkung angegeben.</p>
+		}
+
+		else
+		{
+			<p>Ihre Bemerkung war: @Model.Bemerkung .</p>
+		}
+	}
+	<a href="/home/index">Startseite</a>
+</body>
+</html>

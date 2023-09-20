@@ -1,0 +1,20 @@
+﻿@using Web_Formular_Tester.Models
+@model Formular2Model
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>Ausgabe2</title>
+</head>
+<body>
+	<p>Aha es geht um den Artikel @Model.Artikelbezeichnung .</p>
+	<p>Der Artikel ist im bestand seit: @Model.ImBestandSeit .</p>
+	<p>Der Artikel hat die Farbe:</p>
+	<span style="background-color:@Model.Farbe; color:@Model.Farbe">@Model.Farbe</span>	
+</body>
+</html>
