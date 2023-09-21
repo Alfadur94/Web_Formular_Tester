@@ -1,0 +1,90 @@
+﻿/*Ansicht für mobile Geräte als Default*/
+@media screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/*Ansicht für Tablets*/
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/*Ansicht für Desktop*/
+@media screen and (min-width: 1025px) {
+    .container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
+/*Toggle Slider für Darkmode und Lightmode*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+    .switch input {
+        display: none;
+    }
+
+    .switch .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #c32e04;
+        transition: all .3s ease-in-out;
+        border-radius: 35px;
+    }
+
+        .switch .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            border-radius: 50%;
+            transition: all .3s ease-in-out;
+        }
+
+    .switch input:checked + .slider {
+        background-color: #2196F3;
+    }
+
+    .switch input:focus + .slider {
+        background-color: pink;
+        box-shadow: 0 0 1px #5a9900;
+    }
+
+    .switch input:checked + .slider:before {
+        transform: translateX(1.9em);
+    }
+
+.text .slider:after {
+    position: absolute;
+    content: "Lightmode";
+    font-weight: bold;
+    height: 1.6em;
+    left: -2.5em;
+    bottom: 0.2em;
+}
+
+.text input:checked + .slider:after {
+    content: "Darkmode";
+    color: #5a9900;
+    left: 1.5em;
+    bottom: 0.2em;
+}
