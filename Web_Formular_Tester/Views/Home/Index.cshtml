@@ -9,14 +9,30 @@
 </head>
 <body>
 	<div class="control-group">
-		<label for="darkmode-switch">
+		<label for="darkmode">
 			Darkmode
 			<div class="switch">
-				<input type="checkbox" id="darkmode-switch" name="darkmode-switch" />
+				<input type="checkbox" id="darkmode" name="darkmode" />
 				<span class="slider"></span>
 			</div>
 		</label>
 	</div>
+	<script type="application/javascript">
+		(function(){
+			document.addEventListener("DOMContentLoaded", () => {
+				const darkModeToggle = document.querySelector("#darkmode");
+
+				darkModeToggle.addEventListener("change", () => {
+					if (darkModeToggle.checked) {
+						document.body.classList.add("darkmode");
+					} else {
+						document.body.classList.remove("darkmode");
+					}
+				});
+
+			})
+		})();
+	</script>
 	<div class="container">
 		<div class="heading">
 			<h1>Formular-Tester</h1>
