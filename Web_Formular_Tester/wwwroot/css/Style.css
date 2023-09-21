@@ -88,3 +88,16 @@
     left: 1.5em;
     bottom: 0.2em;
 }
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: #5a9900;
+}
+
+.links {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
